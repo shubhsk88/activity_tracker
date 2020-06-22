@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     end
 
     def create
-        fail
+        
         @user=User.new(user_params)
         if @user.save
             redirect_to user_path(@user),notice:"Thanks for signing up"

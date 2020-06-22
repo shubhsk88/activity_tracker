@@ -1,0 +1,7 @@
+<h2>Sign In</h2>
+
+<%=form_with(url:login_path,locale:true) do |f|%>
+<%=f.label :username%>
+<%=f.text_field :username,autofocus:true%>
+<%=f.submit "Sign In"%>
+<%end%>
