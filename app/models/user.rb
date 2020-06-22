@@ -1,6 +1,7 @@
 class User < ApplicationRecord
    
     has_many :sessions,foreign_key: :author_id,dependent: :destroy
+    has_many :groups,through: :sessions
 
     validates :name, presence:true, format: { with:  /\A[a-zA-Z\s]+\z/,message:"Only letters are allowed"},length:{minimum: 3, maximum: 30}
 
