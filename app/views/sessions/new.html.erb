@@ -1,0 +1,16 @@
+
+
+<%=form_with(model:@session,local:true) do |f|%>
+<div class="header">
+    <div class="icon"><%=link_to root_url do %>
+    <i class="fas fa-arrow-left"></i>
+    <%end%>
+    </div>
+    <div class="title">Log New Habit</div>
+    <div class="submit"><%=f.submit "Save",class:"submit-1"%></div>
+</div>
+<%=f.text_field :name,autofocus:true,placeholder:"Enter your new Activity",class:"input"%>
+
+<%=f.text_field :amount,placeholder:"No of days for habit",class:"input"%>
+<%= f.select :group, options_for_select(@group), :class => 'dropdown' %>
+<%end%>

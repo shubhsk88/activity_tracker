@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
         before_action :require_signin
     def new
         @session=current_user.sessions.build
+        @group=Group.pluck(:name)
         
     end
 
@@ -19,6 +20,6 @@ class SessionsController < ApplicationController
     private
 
     def session_params
-        params.require(:session).permit(:name,:amount)
+        params.require(:session).permit(:name,:amount,:group)
     end
 end
