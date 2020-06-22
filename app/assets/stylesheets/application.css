@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
+html,
+*,
+*::before,
+*::after {
+  font-size: 67.5%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.4rem;
+  font-family: "Montserrat", sans-serif;
+}

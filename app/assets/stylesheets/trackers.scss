@@ -1,0 +1,38 @@
+// Place all the styles related to the trackers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+#logo {
+  font-family: "Pacifico", cursive;
+  font-size: 4rem;
+  color: #434b45;
+  display: flex;
+  justify-content: center;
+  margin-top: 40vh;
+}
+
+.button-container {
+  margin-top: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.button_login,
+.button_signup {
+  margin: 0 auto;
+  padding: 2rem 15rem;
+  background: #3778c2;
+  color: white;
+  font-size: 2rem;
+  outline: none;
+  text-decoration: none;
+  border-radius: 10px;
+}
+.button_login:hover {
+  background: #5f96d4;
+}
+.button_signup {
+  background: transparent;
+  color: black;
+  margin: 2rem 0;
+}
