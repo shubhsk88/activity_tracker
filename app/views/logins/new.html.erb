@@ -1,7 +1,18 @@
-<h2>Sign In</h2>
+
 
 <%=form_with(url:login_path,locale:true) do |f|%>
-<%=f.label :username%>
-<%=f.text_field :username,autofocus:true%>
-<%=f.submit "Sign In"%>
+<div class="header">
+<div class="icon"><%=link_to root_url do %>
+<i class="fas fa-arrow-left"></i>
+<%end%>
+</div>
+<div class="title">Log In</div>
+<div class="submit"><%=f.submit "Log In",class:"submit-1"%></div>
+
+</div>
+
+
+<div class="input-container">
+<%=f.text_field :username,autofocus:true,placeholder:"Username", class:"username"%>
+</div>
 <%end%>
