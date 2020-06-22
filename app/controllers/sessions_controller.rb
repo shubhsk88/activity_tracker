@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-
+        before_action :require_signin
     def new
         @session=current_user.sessions.build
         
