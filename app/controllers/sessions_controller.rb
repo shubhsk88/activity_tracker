@@ -13,8 +13,8 @@ class SessionsController < ApplicationController
             @title="My External Schedule"
             
         when "recent"    
-            @total=current_user.recent
-            @session=current_user.recent_count
+            @total=current_user.recent_count
+            @session=current_user.recent
             @title="My Recent Created Habits"
         else
             redirect_to user_url(current_user)

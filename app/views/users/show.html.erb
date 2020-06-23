@@ -1,12 +1,3 @@
 
 
 
-<%=current_user.name%>
-
-<%@sessions.each do |session|%>
-<li>
-<div><%=session.name%></div>
-<div><%=session.amount%></div>
-<div><%=session.created_at%></div>
-</li>
-<%end%>

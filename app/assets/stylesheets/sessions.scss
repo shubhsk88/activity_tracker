@@ -10,6 +10,8 @@
 }
 
 .session {
+  background: #f2f4f3;
+  min-height: 100vh;
   a {
     color: inherit;
     padding: 0 2rem;
@@ -33,12 +35,48 @@
     box-shadow: 2px -1px 11px 2px rgba(138, 117, 138, 1);
     display: flex;
     justify-content: space-around;
+    background: white;
   }
 
   &__card {
     margin-top: 2rem;
   }
+
+  &__new {
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+
+    width: 100%;
+    background: #5fb523;
+    padding: 1rem 1rem;
+  }
+  &__button {
+    padding: 1.5rem 0;
+    border: 1px solid white;
+    border-radius: 5px;
+
+    color: white;
+    font-weight: 300;
+    a {
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+  }
 }
-.card{
-  
+.card {
+  color: #434c55;
+  margin: 0 5% 1rem 5%;
+  background: white;
+  padding: 1rem;
+  box-shadow: 0 1px 5px rgba(141, 141, 141, 0.178);
+  &__details {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+  &__date {
+    margin-top: 10px;
+  }
 }
