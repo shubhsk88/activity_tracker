@@ -1,3 +1,9 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.profile {
+  width: 100%;
+  background: linear-gradient(5deg, #3778c2 0%, #1b3095 100%);
+  min-height: 100vh;
+}

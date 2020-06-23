@@ -1,3 +1,44 @@
 
 
 
+<section class="profile">
+
+<div class="profile__container">
+<div class="profile__profile"></div>
+<div class="profile__name"><%=@user.name%></div>
+</div>
+
+<div class="profile__options">
+<div class="profile__option">
+
+<div class="profile__option__text"><<%= link_to 'Recent Session Created', filtered_sessions_path(:recent) %></div>
+</div>
+
+<div class="profile__option">
+
+<div class="profile__option__text"> <%=link_to 'All My sessions',filtered_sessions_path(:mysession)%>   </div>
+</div>
+
+<div class="profile__option">
+
+<div class="profile__option__text"> <%= link_to 'All my external session', filtered_sessions_path(:external) %>  </div>
+</div>
+
+<div class="profile__option">
+
+<div class="profile__option__text"> <%= link_to 'All Groups', groups_path %> </div>
+</div>
+
+<div class="profile__option">
+
+<div class="profile__option__text"> <%= link_to 'Log Out', trackers_path %> </div>
+</div>
+
+
+<div class="sidpanel">
+<iframe  title="My Sessions" src="/sessions/filter/mysession" >
+    <p>Placeholder text; only shows up if the page DOESN'T render!</p>
+  </iframe>
+  <%= link_to filtered_sessions_path(:mysession) do %>
+  <% end %>
+</section>

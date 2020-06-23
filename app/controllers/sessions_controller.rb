@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
     
     def index
         case params[:filter]
-        when "my_session"
+        when "mysession"
             @total=current_user.my_sessions_count
             @session=current_user.my_sessions
             @title="My Session Schedule"    
