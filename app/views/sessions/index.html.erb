@@ -1,1 +1,46 @@
 
+<main class="session">
+<div class="session__header">
+<%=link_to user_path(current_user) do %>
+<i class="fa fa-hamburger"></i>
+
+<%end%>
+
+<h2 class="session_head">My Habit session</h2>
+
+
+</div>
+
+<div class="session_stats">
+<div class="session_total">Total Habit Count duration</div>
+<div class="session_count">23</div>
+
+
+
+</div>
+<div  class="session_card">
+<%@session.each do |session|%>
+<div class="card">
+<div class="card_image">
+</div>
+<div class="card_details">
+<div class="card_title"><%=session.name%></div>
+<div class="card_amount"><%=session.amount%></div>
+</div>
+<div class="card_date"><%=session.created_at.strftime("%B %d at %I:%M %P")%></div>
+
+
+
+</div>
+
+
+
+
+
+<%end%>
+</div>
+
+<div class="session_new">
+<%=link_to "Add New Event",new_session_path,class:"session_new_button"%>
+</div>
+</main>

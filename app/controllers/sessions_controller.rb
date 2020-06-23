@@ -1,10 +1,17 @@
 class SessionsController < ApplicationController
         before_action :require_signin
+    
+    def index
+        @session=Session.all
+    end
+    
     def new
         @session=current_user.sessions.build
         @group=Group.pluck(:name)
         
     end
+
+
 
     def create
         @session=current_user.sessions.build(session_params)   
