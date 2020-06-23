@@ -1,7 +1,7 @@
 class GroupsController < ApplicationController
 
     def index
-        @group=Group.ApplicationController
+        @group=Group.all
 
         
     end
@@ -9,6 +9,10 @@ class GroupsController < ApplicationController
     def new
       @group=Group.new
 
+    end
+
+    def show
+        @group = Group.includes(sessions: [:author]).find_by(name: params[:name])
     end
 
     def create
@@ -20,12 +24,13 @@ class GroupsController < ApplicationController
             render :new
         end 
         
-        private
-        def group_params
-            params.require(:group).permit(:name,:icon)
-        end
+       
     end
 
+    private
+    def group_params
+        params.require(:group).permit(:name,:icon)
+    end
 
     
 end

@@ -6,15 +6,39 @@
   font-size: 2em;
   padding: 1rem 2rem;
   border: none;
+  text-decoration: none;
 }
 
-
-.session{
+.session {
+  a {
+    color: inherit;
+    padding: 0 2rem;
+  }
 
   &__header {
-    background:#3778c2;
-    
-
-
+    background: #3778c2;
+    width: 100;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 2.4rem;
   }
+  &__head {
+    display: flex;
+    margin: 0 auto;
+    text-transform: uppercase;
+  }
+  &__stats {
+    padding: 1rem 0;
+    box-shadow: 2px -1px 11px 2px rgba(138, 117, 138, 1);
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__card {
+    margin-top: 2rem;
+  }
+}
+.card{
+  
 }

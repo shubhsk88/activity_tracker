@@ -2,32 +2,33 @@
 <main class="session">
 <div class="session__header">
 <%=link_to user_path(current_user) do %>
-<i class="fa fa-hamburger"></i>
+<i class="fas fa-bars"></i>
 
 <%end%>
 
-<h2 class="session_head">My Habit session</h2>
+<div class="session__head">My Habit session</div>
 
 
 </div>
 
-<div class="session_stats">
-<div class="session_total">Total Habit Count duration</div>
-<div class="session_count">23</div>
+<div class="session__stats">
+<div class="session__total">Total Habit Count duration</div>
+<div class="session__count">23</div>
 
 
 
 </div>
-<div  class="session_card">
+<div  class="session__card">
 <%@session.each do |session|%>
 <div class="card">
-<div class="card_image">
+<div class="card__image">
+<%=group_check(session)%>
 </div>
-<div class="card_details">
-<div class="card_title"><%=session.name%></div>
-<div class="card_amount"><%=session.amount%></div>
+<div class="card__details">
+<div class="card__title"><%=session.name%></div>
+<div class="card__amount"><%=session.amount%></div>
 </div>
-<div class="card_date"><%=session.created_at.strftime("%B %d at %I:%M %P")%></div>
+<div class="card__date"><%=session.created_at.strftime("%B %d at %I:%M %P")%></div>
 
 
 
@@ -40,7 +41,7 @@
 <%end%>
 </div>
 
-<div class="session_new">
-<%=link_to "Add New Event",new_session_path,class:"session_new_button"%>
+<div class="session__new">
+<%=link_to "Add New Event",new_session_path,class:"session__new_button"%>
 </div>
 </main>

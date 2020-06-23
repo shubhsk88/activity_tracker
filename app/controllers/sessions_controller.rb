@@ -2,7 +2,23 @@ class SessionsController < ApplicationController
         before_action :require_signin
     
     def index
-        @session=Session.all
+        case params[:filter]
+        when "my_session"
+            @total=current_user.my_sessions_count
+            @session=current_user.my_sessions
+            @title="My Session Schedule"    
+        when "external"
+            @total=current_user.my_external_sessions_count
+            @session=current_user.my_external_sessions
+            @title="My External Schedule"
+            
+        when "recent"    
+            @total=current_user.recent
+            @session=current_user.recent_count
+            @title="My Recent Created Habits"
+        else
+            redirect_to user_url(current_user)
+        end
     end
     
     def new
