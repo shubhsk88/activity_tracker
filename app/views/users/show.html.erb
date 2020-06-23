@@ -4,41 +4,42 @@
 <section class="profile">
 
 <div class="profile__container">
-<div class="profile__profile"></div>
+<div class="profile__image"> <%= image_tag("https://placeimg.com/100/100/man", class: "profile__thumbnail", alt: "Profile") %></div>
 <div class="profile__name"><%=@user.name%></div>
 </div>
 
 <div class="profile__options">
 <div class="profile__option">
-
+<i class="fas fa-history"></i>
 <div class="profile__option__text"><<%= link_to 'Recent Session Created', filtered_sessions_path(:recent) %></div>
 </div>
 
 <div class="profile__option">
-
+<i class="fas fa-folder-open"></i>
 <div class="profile__option__text"> <%=link_to 'All My sessions',filtered_sessions_path(:mysession)%>   </div>
 </div>
 
 <div class="profile__option">
-
+<i class="fas fa-list"></i>
 <div class="profile__option__text"> <%= link_to 'All my external session', filtered_sessions_path(:external) %>  </div>
 </div>
 
 <div class="profile__option">
-
+<i class="fas fa-object-group"></i>
 <div class="profile__option__text"> <%= link_to 'All Groups', groups_path %> </div>
 </div>
 
 <div class="profile__option">
+<i class="fas fa-sign-out-alt"></i>
 
 <div class="profile__option__text"> <%= link_to 'Log Out', trackers_path %> </div>
 </div>
 
 
-<div class="sidpanel">
-<iframe  title="My Sessions" src="/sessions/filter/mysession" >
+<div class="sidepanel">
+<iframe  title="My Sessions" src="/sessions/filter/recent" >
     <p>Placeholder text; only shows up if the page DOESN'T render!</p>
   </iframe>
-  <%= link_to filtered_sessions_path(:mysession) do %>
+  <%= link_to filtered_sessions_path(:mysessio) do %>
   <% end %>
 </section>
