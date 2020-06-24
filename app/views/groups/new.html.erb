@@ -9,7 +9,7 @@
 </div>
 <%=render 'shared/errors',object:@group%>
 <%=f.text_field :name,required:true,autofocus:true,placeholder:"Name of the group",class:"input"%>
-
-<%=f.text_field :icon,required:true,placeholder:"Link for the icon",class:"input"%>
+<%=@group.icon=""%>
+<%=f.text_field :icon,placeholder:"https://website.com/image.png",class:"input"%>
 
 <%end%>

@@ -32,11 +32,11 @@ class User < ApplicationRecord
 
 
 
-    def recent
-        sessions.order(created_at: :desc).limit(5)
+    def top_activities
+        sessions.order(amount: :desc).limit(5)
     end
 
-    def recent_count
-        recent.sum(:amount)
+    def top_activities_count
+        top_activities.sum(:amount)
     end
 end

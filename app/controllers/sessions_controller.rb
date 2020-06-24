@@ -6,16 +6,16 @@ class SessionsController < ApplicationController
         when "mysession"
             @total=current_user.my_sessions_count
             @session=current_user.my_sessions
-            @title="My Session Schedule"    
+            @title="My Activity Log"    
         when "external"
             @total=current_user.my_external_sessions_count
             @session=current_user.my_external_sessions
-            @title="My External Schedule"
+            @title="My External Activity Log"
             
-        when "recent"    
-            @total=current_user.recent_count
-            @session=current_user.recent
-            @title="My Recent Created Habits"
+        when "topactivites"    
+            @total=current_user.top_activities_count
+            @session=current_user.top_activities
+            @title="My Popular activities"
         else
             redirect_to user_url(current_user)
         end

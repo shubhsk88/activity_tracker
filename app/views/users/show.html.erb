@@ -11,17 +11,17 @@
 <div class="profile__options">
 <div class="profile__option">
 <i class="fas fa-history"></i>
-<div class="profile__option__text"><%= link_to 'Recent Session Created', filtered_sessions_path(:recent) %></div>
+<div class="profile__option__text"><%= link_to 'My Popular Activites', filtered_sessions_path(:top_activities) %></div>
 </div>
 
 <div class="profile__option">
 <i class="fas fa-folder-open"></i>
-<div class="profile__option__text"> <%=link_to 'All My sessions',filtered_sessions_path(:mysession)%>   </div>
+<div class="profile__option__text"> <%=link_to 'All My Activities',filtered_sessions_path(:mysession)%>   </div>
 </div>
 
 <div class="profile__option">
 <i class="fas fa-list"></i>
-<div class="profile__option__text"> <%= link_to 'All my external session', filtered_sessions_path(:external) %>  </div>
+<div class="profile__option__text"> <%= link_to 'All my external Activities', filtered_sessions_path(:external) %>  </div>
 </div>
 
 <div class="profile__option">

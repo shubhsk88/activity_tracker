@@ -17,7 +17,7 @@
 
 <%= link_to group_path(g) do %>
 <div class="group">
-<%= image_tag "https://placeimg.com/50/50/tech'",class:"group__icon"%>
+<%= image_tag g.icon,class:"group__icon", onerror: "this.error=null;this.src='https://placeimg.com/50/50/tech'"%>
 
 <div class="group__text"> <%=g.name%> </div>
 <div class="group__create"><%=g.created_at.strftime("%B %d at %I:%M %P")%></div>
