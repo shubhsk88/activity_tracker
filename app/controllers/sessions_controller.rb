@@ -21,9 +21,11 @@ class SessionsController < ApplicationController
         end
     end
     
+
     def new
+        groups_list
         @session=current_user.sessions.build
-        @group=Group.pluck(:name)
+        
         
     end
 
@@ -32,11 +34,12 @@ class SessionsController < ApplicationController
     def create
         
         @session=current_user.sessions.build(session_params)   
-        @session.author_id=current_user.id
-        @session.groups<<params[:group]
-        if(@session.save)
-            redirect_to user_path,notice:"Session sucessfully Created"
+        
+        
+     if(@session.save)
+            redirect_to sessions_path,notice:"Session sucessfully Created"
         else
+        groups_clean
         render :new
         end
     end
@@ -44,7 +47,16 @@ class SessionsController < ApplicationController
 
     private
 
+    def groups_list
+        @group_options = Group.all.map { |g| [g.name, g.name] }
+        @group_options.unshift(['Select a group (optional)', nil])
+      end
+    
+    def groups_clean
+        @group_options = Group.all.map { |g| [g.name, g.name] }
+    end
+
     def session_params
-        params.require(:session).permit(:name,:amount)
+        params.require(:session).permit(:name,:amount,:group)
     end
 end

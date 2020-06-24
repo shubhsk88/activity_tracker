@@ -12,14 +12,14 @@ class LoginsController < ApplicationController
              flash.now[:alert] = 'Invalid Credentials'
             render :new 
         else
-            session[:user_id]=user.id
+            session[:username]=user.username
             redirect_to (session[:intended_url] || user), notice: "Welcome back #{user.name}"
             
         end     
     end
 
     def destroy
-        session[:user_id] = nil
+        session[:username] = nil
         redirect_to root_url
         
     end
