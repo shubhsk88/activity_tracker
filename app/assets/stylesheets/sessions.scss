@@ -97,18 +97,19 @@ select {
   &__date {
     margin-top: 10px;
   }
-
+  /* stylelint-disable */
   &__new {
     flex: 1;
   }
 
   &__image {
     margin-right: 1rem;
-    
+
     img {
       width: 100px;
       height: 100px;
       border-radius: 50%;
     }
   }
+  /* stylelint-enable */
 }
