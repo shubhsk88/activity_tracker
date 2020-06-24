@@ -6,12 +6,12 @@
     <i class="fas fa-arrow-left"></i>
     <%end%>
     </div>
-    <div class="title">Log New Habit</div>
+    <div class="title">Log New Activity</div>
     <div class="submit"><%=f.submit "Save",class:"submit-1"%></div>
 </div>
 <%=render 'shared/errors',object:@session%>
 <%=f.text_field :name,required:true,autofocus:true,placeholder:"Enter your new Activity",class:"input"%>
 
-<%=f.text_field :amount,required:true,placeholder:"No of days for habit",class:"input"%>
+<%=f.text_field :amount,required:true,placeholder:"No of hours spents in activity",class:"input"%>
 <%= select_tag(:group, options_for_select(@group_options), size: 8)%>
 <%end%>
