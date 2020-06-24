@@ -8,10 +8,11 @@
   border: none;
   text-decoration: none;
 }
+
 select {
   width: 90%;
-
   margin: 4rem auto;
+
   option {
     padding: 0.5rem 0;
     font-size: 1.4em;
@@ -22,6 +23,7 @@ select {
 .session {
   background: #f2f4f3;
   min-height: 100vh;
+
   a {
     color: inherit;
     padding: 0 2rem;
@@ -35,11 +37,13 @@ select {
     color: white;
     font-size: 2em;
   }
+
   &__head {
     display: flex;
     margin: 0 auto;
     text-transform: uppercase;
   }
+
   &__stats {
     padding: 1rem 0;
     box-shadow: 0 1px 5px rgba(141, 141, 141, 0.178);
@@ -54,48 +58,53 @@ select {
 
   &__new {
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     text-align: center;
-
     width: 100%;
     background: #5fb523;
     padding: 1rem 1rem;
   }
+
   &__button {
     padding: 1.5rem 0;
     border: 1px solid white;
     border-radius: 5px;
-
     color: white;
     font-weight: 300;
+
     a {
       text-decoration: none;
       font-size: 1.5em;
     }
   }
 }
+
 .card {
   color: #434c55;
   margin: 0 5% 1rem 5%;
   background: white;
   padding: 1rem;
   display: flex;
-
   box-shadow: 0 1px 5px rgba(141, 141, 141, 0.178);
+
   &__details {
     margin-top: 1rem;
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
   }
+
   &__date {
     margin-top: 10px;
   }
+
   &__new {
     flex: 1;
   }
+
   &__image {
     margin-right: 1rem;
+    
     img {
       width: 100px;
       height: 100px;

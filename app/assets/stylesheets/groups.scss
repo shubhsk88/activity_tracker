@@ -8,15 +8,17 @@
   margin-bottom: 2em;
   border-bottom: 1px solid white;
   padding-bottom: 10px;
+
   &__icon {
     border-radius: 50%;
-
     width: 50px;
     height: 50px;
   }
+
   &__text {
     padding: 0 20px;
   }
+
   &__create {
     padding-top: 10px;
   }
@@ -26,6 +28,7 @@
     padding: 4rem 8rem;
     font-size: 2em;
   }
+
   &__name {
     padding-left: 3rem;
   }
