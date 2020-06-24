@@ -1,0 +1,39 @@
+<section class="profile">
+
+<div class="profile__container">
+
+<div class="profile__name"> Group</div>
+</div>
+
+
+
+<%@group.each do |g|%>
+<div class="profile__option">
+<%= link_to group_path(g) do %>
+<%= image_tag g.icon,class:"group_thumbnail", onerror: "this.error=null;this.src='https://placeimg.com/50/50/tech'" %>
+
+<div class="profile__option__text"> <%=g.name%> </div>
+<span><%=g.created_at.strftime("%B %d at %I:%M %P")%></span>
+<%end%>
+
+</div>
+<%end%>
+<div class="profile__option">
+<i class="far fa-plus-square"></i>
+
+<div class="profile__option__text"> <%= link_to 'Create New Group', new_group_path %> </div>
+</div>
+
+
+
+</section>
+<div class="sidepanel">
+
+  
+  <iframe  title="My Sessions" src="/sessions/filter/recent" >
+    <p>Placeholder text; only shows up if the page DOESN'T render!</p>
+  </iframe>
+  <%= link_to filtered_sessions_path(:mysession) do %>
+  <% end %>
+  
+</div>
