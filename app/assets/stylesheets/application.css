@@ -26,3 +26,25 @@ html,
 body {
   font-family: "Montserrat", sans-serif;
 }
+
+.flash-alert {
+  border-radius: 10px;
+  padding: 2rem 1rem;
+
+  font-weight: bold;
+  color: #e53e3e;
+  text-align: center;
+  width: 50%;
+  margin: 1rem auto;
+  background: #fff5f5;
+}
+.flash-notice {
+  border-radius: 10px;
+  padding: 2rem 1rem;
+
+  text-align: center;
+  width: 50%;
+  margin: 1rem auto;
+  background: #f0fff4;
+  color: #319795;
+}

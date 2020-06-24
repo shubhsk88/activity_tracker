@@ -1,6 +1,6 @@
 
 <%=form_with(model:@user,local:true) do |f|%>
-<%=render "shared/errors" ,object:@user%>
+
 
 <div class="header">
 <div class="icon"><%=link_to root_url do %>
@@ -12,6 +12,7 @@
 
 </div>
 
+<%=render "shared/errors" ,object:@user%>
 <div class="input-container">
 <%=f.text_field :name,autofocus:true,placeholder:"Full Name",class:"input"%>
 

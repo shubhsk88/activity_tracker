@@ -9,10 +9,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 20px;
 }
 
 .icon {
-  font-size: 2em;
+  font-size: inherit;
   padding-left: 20px;
   text-decoration: none;
 }
@@ -21,7 +22,7 @@
 }
 
 .title {
-  font-size: 2em;
+  font-size: inherit;
   color: white;
   text-transform: uppercase;
 }
@@ -29,7 +30,7 @@
   background: transparent;
   border: none;
   color: white;
-  font-size: 2em;
+  font-size: inherit;
 }
 
 .input-container {
@@ -40,7 +41,7 @@
   padding: 1em;
   width: 100%;
   border: none;
-  border-top: 2px solid grey;
-  border-bottom: 2px solid grey;
-  font-size: 1.6em;
+  border-top: 2px solid #cbd5e0;
+  border-bottom: 2px solid #cbd5e0;
+  font-size: inherit;
 }
