@@ -40,10 +40,11 @@
 </section>
 <div class="sidepanel">
 
-  <%= link_to filtered_sessions_path(:mysession) do %>
+  
   <iframe  title="My Sessions" src="/sessions/filter/recent" >
     <p>Placeholder text; only shows up if the page DOESN'T render!</p>
   </iframe>
+  <%= link_to filtered_sessions_path(:mysession) do %>
   <% end %>
   
 </div>

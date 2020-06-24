@@ -8,9 +8,6 @@ class User < ApplicationRecord
 
     
 
-    # scope :my_sessions, -> {sessions.includes(:groups).select{ |a| a.groups.any?}}
-
-    # scope :my_external_sesions, ->{ sessions.includes(:groups).select{ |a| !a.groups.any?}}
 
     
 
@@ -20,14 +17,20 @@ class User < ApplicationRecord
     def my_sessions
         sessions.includes(:groups).select{ |a| a.groups.any?}
     end
+
+    def my_sessions_count
+        sessions.select('session.id, group.id').joins(:groups).sum(:amount)
+      end
     def my_external_sessions
         sessions.includes(:groups).select{ |a| !a.groups.any?}
     
     end
 
     def my_external_sessions_count
-        my_external_sesions.sum(:amount)
+        sessions.left_outer_joins(:groupings).where(groupings: { session_id: nil }).sum(:amount)
     end
+
+
 
     def recent
         sessions.order(created_at: :desc).limit(5)

@@ -4,4 +4,9 @@ class Session < ApplicationRecord
     has_many :groups,through: :groupings
     validates :amount ,presence:true,numericality: {only_float: true}
     validates :name,presence:true
+
+
+    def group
+        groups.first
+    end
 end

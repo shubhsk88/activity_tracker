@@ -19,11 +19,11 @@
 
   &__header {
     background: #3778c2;
-    width: 100;
+    width: 100%;
     display: flex;
     align-items: center;
     color: white;
-    font-size: 2.4rem;
+    font-size: 2em;
   }
   &__head {
     display: flex;
@@ -32,7 +32,7 @@
   }
   &__stats {
     padding: 1rem 0;
-    box-shadow: 2px -1px 11px 2px rgba(138, 117, 138, 1);
+    box-shadow: 0 1px 5px rgba(141, 141, 141, 0.178);
     display: flex;
     justify-content: space-around;
     background: white;
@@ -60,7 +60,7 @@
     font-weight: 300;
     a {
       text-decoration: none;
-      font-size: 1.5rem;
+      font-size: 1.5em;
     }
   }
 }

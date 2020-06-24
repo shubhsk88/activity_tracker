@@ -30,8 +30,10 @@ class SessionsController < ApplicationController
 
 
     def create
+        
         @session=current_user.sessions.build(session_params)   
         @session.author_id=current_user.id
+        @session.groups<<params[:group]
         if(@session.save)
             redirect_to user_path,notice:"Session sucessfully Created"
         else
@@ -43,6 +45,6 @@ class SessionsController < ApplicationController
     private
 
     def session_params
-        params.require(:session).permit(:name,:amount,:group)
+        params.require(:session).permit(:name,:amount)
     end
 end
