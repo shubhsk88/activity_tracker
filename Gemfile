@@ -29,7 +29,6 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
-
 group :development, :test do
   gem 'byebug'
   gem 'rspec-rails', '~> 3.4'
@@ -47,11 +46,11 @@ end
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
-  gem 'shoulda-matchers', '~> 4.0', require: false
   gem 'database_cleaner'
   gem 'database_cleaner-active_record'
-  gem 'selenium-webdriver'
   gem 'rspec'
+  gem 'selenium-webdriver'
+  gem 'shoulda-matchers', '~> 4.0', require: false
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
 end

@@ -13,7 +13,7 @@ RSpec.feature 'Login', type: :feature do
 
     fill_in 'session_name', with: 'Session of basketball'
     fill_in 'session_amount', with: 6
-    
+
     click_button 'Save'
     visit '/sessions/filter/external'
     expect(page).to have_text('Session of basketball')

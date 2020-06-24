@@ -8,6 +8,16 @@
   border: none;
   text-decoration: none;
 }
+select {
+  width: 90%;
+
+  margin: 4rem auto;
+  option {
+    padding: 0.5rem 0;
+    font-size: 1.4em;
+    text-align: center;
+  }
+}
 
 .session {
   background: #f2f4f3;
