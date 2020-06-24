@@ -9,6 +9,8 @@
 
 ## Live Demo
 
+[Live Link](https://activon.herokuapp.com/)
+
 ## Screenshot
 
 ![screenshot](https://imgur.com/vJxV68K.png)
@@ -69,9 +71,6 @@ Open `http://localhost:3000/` in your browser.
 
 ```
 
-
-
-
 ## Authors
 
 👤 **Shubham Singh**
@@ -94,4 +93,3 @@ Give a ⭐️ if you like this project!
 
 - Rails Documentation
 - Behance design by [Gregoire Vella](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=)
-
