@@ -11,7 +11,7 @@
 <div class="profile__options">
 <div class="profile__option">
 <i class="fas fa-history"></i>
-<div class="profile__option__text"><<%= link_to 'Recent Session Created', filtered_sessions_path(:recent) %></div>
+<div class="profile__option__text"><%= link_to 'Recent Session Created', filtered_sessions_path(:recent) %></div>
 </div>
 
 <div class="profile__option">
@@ -36,10 +36,14 @@
 </div>
 
 
+
+</section>
 <div class="sidepanel">
-<iframe  title="My Sessions" src="/sessions/filter/recent" >
+
+  <%= link_to filtered_sessions_path(:mysession) do %>
+  <iframe  title="My Sessions" src="/sessions/filter/recent" >
     <p>Placeholder text; only shows up if the page DOESN'T render!</p>
   </iframe>
-  <%= link_to filtered_sessions_path(:mysessio) do %>
   <% end %>
-</section>
+  
+</div>

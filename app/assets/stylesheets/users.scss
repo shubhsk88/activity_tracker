@@ -1,12 +1,18 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-
+body {
+  max-height: 100vh;
+  overflow-x: hidden;
+}
 .profile {
-  overflow: hidden;
-  width: 100%;
   background: linear-gradient(5deg, #3778c2 0%, #1b3095 100%);
-  height: 100vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 3em 30% 1em 1em;
   color: white;
   &__container {
     display: flex;
@@ -47,14 +53,26 @@
   }
 }
 
-.sidepanel {
-  position: absolute;
-  right: -10%;
-  overflow: hidden;
-  top: 10%;
-  iframe {
-    position: relative;
-    height: 80vh;
-    width: 30rem;
-  }
-}
+// .sidepanel {
+//   position: absolute;
+//   width: 100%;
+//   right: -80%;
+//   z-index: 10;
+
+//   top: 3em;
+//   bottom: 3em;
+//   iframe {
+//     position: relative;
+//     height: 100%;
+
+//     border: 0;
+//   }
+//   a {
+//     display: block;
+//     position: absolute;
+//     height: 100%;
+//     z-index: 100;
+//     top: 0;
+//     width: 100%;
+//   }
+// }
