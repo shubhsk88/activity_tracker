@@ -34,7 +34,7 @@ class SessionsController < ApplicationController
     def create
         
         @session=current_user.sessions.build(session_params)   
-        
+        @session.group=params[:group]
         
      if(@session.save)
             redirect_to sessions_path,notice:"Session sucessfully Created"
