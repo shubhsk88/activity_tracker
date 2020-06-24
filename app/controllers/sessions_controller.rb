@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
       @session = current_user.my_external_sessions
       @title = 'My External Activity Log'
 
-    when 'topactivites'
+    when 'top'
       @total = current_user.top_activities_count
       @session = current_user.top_activities
       @title = 'My Popular activities'
