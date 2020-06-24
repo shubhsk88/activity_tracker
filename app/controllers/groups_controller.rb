@@ -1,7 +1,7 @@
 class GroupsController < ApplicationController
     before_action :require_signin
     def index
-        @group=Group.all
+        @group=Group.order(:name).all
 
         
     end
@@ -12,7 +12,8 @@ class GroupsController < ApplicationController
     end
 
     def show
-        @group = Group.includes(sessions: [:author]).find_by(name: params[:name])
+        
+        @group = Group.includes(sessions: [:author]).find_by(name: params[:id])
     end
 
     def create

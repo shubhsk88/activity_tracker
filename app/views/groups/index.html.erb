@@ -1,27 +1,35 @@
 <section class="profile">
 
-<div class="profile__container">
+<div class="group__container ">
 
-<div class="profile__name"> Group</div>
+<div class="home"><%= link_to user_path(current_user) do %>
+<i class="fas fa-arrow-left"></i>
+<%end%>
+</div>
+<div class="group__name"> Group</div>
+
+
 </div>
 
 
 
 <%@group.each do |g|%>
-<div class="profile__option">
+
 <%= link_to group_path(g) do %>
-<%= image_tag g.icon,class:"group_thumbnail", onerror: "this.error=null;this.src='https://placeimg.com/50/50/tech'" %>
+<div class="group">
+<%= image_tag "https://placeimg.com/50/50/tech'",class:"group__icon"%>
 
-<div class="profile__option__text"> <%=g.name%> </div>
-<span><%=g.created_at.strftime("%B %d at %I:%M %P")%></span>
-<%end%>
-
+<div class="group__text"> <%=g.name%> </div>
+<div class="group__create"><%=g.created_at.strftime("%B %d at %I:%M %P")%></div>
 </div>
 <%end%>
-<div class="profile__option">
+
+
+<%end%>
+<div class="group">
 <i class="far fa-plus-square"></i>
 
-<div class="profile__option__text"> <%= link_to 'Create New Group', new_group_path %> </div>
+<div class="group__text"> <%= link_to 'Create New Group', new_group_path %> </div>
 </div>
 
 
@@ -30,7 +38,7 @@
 <div class="sidepanel">
 
   
-  <iframe  title="My Sessions" src="/sessions/filter/recent" >
+  <iframe  title="My Sessions" src="/sessions/filter/mysession" >
     <p>Placeholder text; only shows up if the page DOESN'T render!</p>
   </iframe>
   <%= link_to filtered_sessions_path(:mysession) do %>
