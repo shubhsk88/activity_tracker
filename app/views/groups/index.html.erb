@@ -1,5 +1,7 @@
 <section class="profile">
+
   <div class="group__container">
+
     <div class="home">
       <%= link_to user_path(current_user) do %>
         <i class="fas fa-arrow-left"></i>
@@ -7,7 +9,9 @@
     </div>
     <div class="group__name">Group</div>
   </div>
-  <%@group.each do |g|%> <%= link_to group_path(g) do %>
+  
+  <%@group.each do |g|%>
+    <%= link_to group_path(g) do %>
       <div class="group">
         <%= image_tag g.icon,class:"group__icon", onerror:"this.error=null;this.src='https://placeimg.com/50/50/tech'"%>
         <div class="group__text"><%=g.name%></div>
@@ -15,14 +19,14 @@
           <%=g.created_at.strftime("%B %d at %I:%M %P")%>
         </div>
       </div>
-    <%end%> <%end% >
+    <%end%>
+  <%end%>
   <div class="group">
     <i class="far fa-plus-square"></i>
-
     <div class="group__text">
       <%= link_to 'Create New Group', new_group_path %>
-</div>
-</div>
+    </div>
+  </div>
 </section>
 <div class="sidepanel">
   <iframe title="My Sessions" src="/sessions/filter/mysession">
