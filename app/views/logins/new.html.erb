@@ -1,0 +1,21 @@
+<%=form_with(url:login_path,method: "post",local:true) do |f|%>
+  <div class="header">
+    <div class="icon">
+      <%=link_to root_url do %>
+        <i class="fas fa-arrow-left"></i>
+      <%end%>
+    </div>
+    <div class="title">Log In</div>
+    <div class="submit">
+      <%=f.submit "Log In",class:"submit-1"%>
+    </div>
+  </div>
+  <% if flash.now[:alert] %>
+    <div class="flash-alert">
+      <%= flash.now[:alert] %>
+    </div>
+  <% end %>
+  <div class="input-container">
+    <%=f.text_field :username,autofocus:true,placeholder:"Username", class:"input"%>
+  </div>
+<%end%>
