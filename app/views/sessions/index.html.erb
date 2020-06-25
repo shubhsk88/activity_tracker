@@ -3,14 +3,18 @@
     <%=link_to user_path(current_user) do %>
       <i class="fas fa-bars"></i>
     <%end%>
-    <div class="session__head"><%=@title%></div>
+    <div class="session__head">
+      <%=@title%>
+    </div>
   </div>
   <div class="session__stats">
     <div class="session__total">Total Activity Hours Count</div>
-    <div class="session__count">  <%=@total%> </div>
+    <div class="session__count"> 
+      <%=@total%>
+    </div>
   </div>
   <div  class="session__card">
-    <%@session.each do |session|%>
+    <% @session.each do |session| %>
       <div class="card">
         <div class="card__image">
           <%=group_check(session)%>
@@ -21,12 +25,16 @@
             <div class="card__amount"><%=session.amount%></div>
           </div>
           <hr/>
-          <div class="card__date"><%=session.created_at.strftime("%B %d at %I:%M %P")%></div>
+          <div class="card__date">
+            <%=session.created_at.strftime("%B %d at %I:%M %P")%>
+          </div>
         </div>
       </div>
-    <%end%>
+    <% end %>
   </div>
   <div class="session__new">
-    <div class="session__button"><%=link_to "Add New",new_session_path,class:"session__new_button"%></div>
+    <div class="session__button">
+      <%=link_to "Add New",new_session_path,class:"session__new_button"%>
+    </div>
   </div>
 </main>

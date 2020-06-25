@@ -1,28 +1,42 @@
 <section class="profile">
   <div class="profile__container">
-    <div class="profile__image"> <%= image_tag("https://placeimg.com/100/100/man", class: "profile__thumbnail", alt: "Profile") %></div>
-    <div class="profile__name"><%=@user.name%></div>
+    <div class="profile__image"> 
+      <%= image_tag("https://placeimg.com/100/100/man", class: "profile__thumbnail", alt: "Profile") %>
+    </div>
+    <div class="profile__name">
+      <%=@user.name%>
+    </div>
   </div>
   <div class="profile__options">
     <div class="profile__option">
       <i class="fas fa-history"></i>
-      <div class="profile__option__text"><%= link_to 'My Popular Activites', filtered_sessions_path(:top) %></div>
+      <div class="profile__option__text">
+        <%= link_to 'My Popular Activites', filtered_sessions_path(:top) %>
+      </div>
     </div>
     <div class="profile__option">
       <i class="fas fa-folder-open"></i>
-      <div class="profile__option__text"> <%=link_to 'All My Activities',filtered_sessions_path(:mysession)%>   </div>
+      <div class="profile__option__text"> 
+        <%=link_to 'All My Activities',filtered_sessions_path(:mysession)%> 
+      </div>
     </div>
     <div class="profile__option">
       <i class="fas fa-list"></i>
-      <div class="profile__option__text"> <%= link_to 'All my external Activities', filtered_sessions_path(:external) %>  </div>
+      <div class="profile__option__text"> 
+        <%= link_to 'All my external Activities', filtered_sessions_path(:external) %> 
+      </div>
     </div>
     <div class="profile__option">
       <i class="fas fa-object-group"></i>
-      <div class="profile__option__text"> <%= link_to 'All Groups', groups_path %> </div>
+      <div class="profile__option__text"> 
+        <%= link_to 'All Groups', groups_path %>
+      </div>
     </div>
     <div class="profile__option">
       <i class="fas fa-sign-out-alt"></i>
-      <div class="profile__option__text"> <%= link_to 'Log Out', trackers_path %> </div>
+      <div class="profile__option__text"> 
+        <%= link_to 'Log Out', trackers_path %>
+      </div>
     </div>
   </section>
   <div class="sidepanel">
