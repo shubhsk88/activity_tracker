@@ -1,6 +1,6 @@
 # Activity Tracker app with Ruby on Rails
 
-> This app let you track your activity in your daily life and provide the personalised activity dashboard with the option to see the popular activities in your day and provide to link to the different genre like study,health,fitness,etc
+This app lets you track your activity in your daily life and provide a personalized activity dashboard. It also allows you to filter the events according to the different categories. Activities can also be included in categories when creating them, and new groups can be created as well.
 
 ## Built With
 
