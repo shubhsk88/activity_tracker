@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :sessions
-  resources :groups
-  resources :users
+  resources :sessions,only:[:new,:index,:create]
+  resources :groups,only:[:index,:new,:show,:create]
+  resources :users, only:[:new,:create,:show]
   resource :login,only:[:new,:create,:destroy]
   resources :trackers,only:[:index]
   root "trackers#index"
