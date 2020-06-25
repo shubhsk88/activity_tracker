@@ -1,13 +1,13 @@
 <%if object.errors.any?%>
-    <section class="errors">
-        <h2>Oops your Entries could not be saved</h2>
-        <h3>
-            Please Correct the following <%= pluralize(object.errors.size,"error")%>
-        </h3>
-        <ul>
-            <%object.errors.full_messages.each do |message|%>
-                <li><%=message%></li>
-            <%end%>
-        </ul>    
-    </section>
+  <section class="errors">
+    <h2>Oops your Entries could not be saved</h2>
+    <h3>
+      Please Correct the following <%= pluralize(object.errors.size,"error")%>
+    </h3>
+    <ul>
+      <%object.errors.full_messages.each do |message|%>
+        <li><%=message%></li>
+      <%end%>
+    </ul>
+  </section>
 <%end%> 

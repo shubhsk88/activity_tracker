@@ -1,20 +1,15 @@
-
 <%=form_with(model:@user,local:true) do |f|%>
-
-
-<div class="header">
-<div class="icon"><%=link_to root_url do %>
-<i class="fas fa-arrow-left"></i>
-<%end%>
-</div>
-<div class="title">Register</div>
-<div class="submit"><%=f.submit "Next",class:"submit-1"%></div>
-
-</div>
-
-<%=render "shared/errors" ,object:@user%>
-<div class="input-container">
-<%=f.text_field :name,autofocus:true,placeholder:"Full Name",class:"input"%>
-
-<%=f.text_field :username,placeholder:"Username",class:"input"%>
-<%end%>
+  <div class="header">
+    <div class="icon">
+      <%=link_to root_url do %>
+        <i class="fas fa-arrow-left"></i>
+      <%end%>
+    </div>
+    <div class="title">Register</div>
+    <div class="submit"><%=f.submit "Next",class:"submit-1"%></div>
+  </div>
+  <%=render "shared/errors" ,object:@user%>
+  <div class="input-container">
+    <%=f.text_field :name,autofocus:true,placeholder:"Full Name",class:"input"%>
+    <%=f.text_field :username,placeholder:"Username",class:"input"%>
+  <%end%>

@@ -1,53 +1,33 @@
 <main class="session">
-<div class="session__header">
-<%=link_to user_path(current_user) do %>
-<i class="fas fa-bars"></i>
-
-<%end%>
-
-<div class="session__head"><%=@group.name%></div>
-
-
-</div>
-
-
-
-
+  <div class="session__header">
+    <%=link_to user_path(current_user) do %>
+      <i class="fas fa-bars"></i>
+    <%end%>
+    <div class="session__head"><%=@group.name%></div>
+  </div>
 </div>
 <div  class="session__card">
-<%@group.sessions.each do |session|%>
-<div class="card">
-
-<div class="card__new">
-<div class="card__details">
-<div class="card__title"><%=session.name%></div>
-<div class="card__amount"><%=session.amount%></div>
+  <%@group.sessions.each do |session|%>
+    <div class="card">
+        <div class="card__new">
+            <div class="card__details">
+            <div class="card__title"><%=session.name%></div>
+            <div class="card__amount"><%=session.amount%></div>
+            </div>
+            <hr/>
+            <div class="card__date">
+            <p><%=session.author.name%>
+                <span>
+                <%=session.created_at.strftime("%B %d at %I:%M %P")%>
+                </span>
+            </p>
+            </div>
+        </div>
+        </div>
+    </div>
+  <%end%>
 </div>
-<hr/>
-<div class="card__date">
-
-    <p><%=session.author.name%>
-
-        <span>
-            <%=session.created_at.strftime("%B %d at %I:%M %P")%>
-        </span>
-</p>
-</div>
-</div>
-</div>
-
-
-
-</div>
-
-
-
-
-
-<%end%>
-</div>
-
 <div class="session__new">
-<div class="session__button"><%=link_to "Add New",new_session_path,class:"session__new_button"%></div>
+  <div class="session__button"><%=link_to "Add New",new_session_path,class:"session__new_button"%></div>
 </div>
 </main>
